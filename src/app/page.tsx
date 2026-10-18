@@ -30,10 +30,10 @@ export default function Home() {
           <span className="font-display text-base uppercase tracking-[0.06em]">Fair Ping</span>
         </a>
         <nav className="flex items-center gap-5 text-sm text-muted">
-          <a href="#format" className="hidden transition-colors hover:text-paper sm:inline">Format</a>
-          <a href="#crew" className="hidden transition-colors hover:text-paper sm:inline">Crew</a>
-          <a href={site.x} className="transition-colors hover:text-paper">X</a>
-          <a href={site.twitch} className="transition-colors hover:text-paper">Twitch</a>
+          <a href="#format" className="hidden py-3 transition-colors hover:text-paper sm:inline">Format</a>
+          <a href="#crew" className="hidden py-3 transition-colors hover:text-paper sm:inline">Crew</a>
+          <a href={site.x} className="py-3 transition-colors hover:text-paper">X</a>
+          <a href={site.twitch} className="py-3 transition-colors hover:text-paper">Twitch</a>
         </nav>
       </header>
 
@@ -51,13 +51,13 @@ export default function Home() {
           <div className="mt-9 flex flex-wrap gap-3">
             <a
               href={joinUrl}
-              className="rounded-md bg-accent px-5 py-3 text-sm font-medium text-ink transition-transform active:scale-[0.97]"
+              className="rounded-md bg-accent px-5 py-3 text-sm font-medium text-ink transition-transform active:scale-[0.96]"
             >
               {joinLabel}
             </a>
             <a
               href={site.x}
-              className="rounded-md border border-line px-5 py-3 text-sm font-medium transition-colors hover:border-muted active:scale-[0.97]"
+              className="rounded-md border border-line px-5 py-3 text-sm font-medium transition-[border-color,scale] hover:border-muted active:scale-[0.96]"
             >
               Follow @fairping
             </a>
@@ -135,7 +135,7 @@ export default function Home() {
           </ul>
           <a
             href={joinUrl}
-            className="mt-8 inline-block rounded-md border border-line px-5 py-3 text-sm font-medium transition-colors hover:border-muted active:scale-[0.97]"
+            className="mt-8 inline-block rounded-md border border-line px-5 py-3 text-sm font-medium transition-[border-color,scale] hover:border-muted active:scale-[0.96]"
           >
             {site.discord ? "Say hi on Discord" : `Email ${site.email}`}
           </a>

@@ -1,7 +1,7 @@
 export const site = {
   name: "Fair Ping",
   url: "https://fairping.vercel.app",
-  discord: "",
+  discord: "https://discord.gg/ZyGAZ523Yd",
   x: "https://x.com/fairping",
   twitch: "https://www.twitch.tv/fairpingcup",
   challengermode: "https://www.challengermode.com/s/fairping",
