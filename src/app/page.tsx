@@ -78,19 +78,19 @@ export default function Home() {
             The big Forever events so far ran on the US-only beta. From Europe, every global
             cooldown and interrupt landed late.
           </p>
-          <dl className="mt-10 space-y-6">
+          <ul className="mt-10 space-y-6">
             {PING.map((row) => (
-              <div key={row.where}>
-                <div className="flex items-baseline justify-between gap-4 text-sm">
-                  <dt className="text-muted">{row.where}</dt>
-                  <dd className="tabular-nums">{row.ms}</dd>
-                </div>
-                <div className="mt-2 h-2 rounded-full bg-panel">
+              <li key={row.where}>
+                <p className="flex items-baseline justify-between gap-4 text-sm">
+                  <span className="text-muted">{row.where}</span>
+                  <span className="tabular-nums">{row.ms}</span>
+                </p>
+                <div className="mt-2 h-2 rounded-full bg-panel" aria-hidden="true">
                   <div className={`h-2 rounded-full ${row.width} ${row.tone}`} />
                 </div>
-              </div>
+              </li>
             ))}
-          </dl>
+          </ul>
         </section>
 
         <section id="format" className="scroll-mt-6 border-t border-line py-20">
