@@ -52,7 +52,7 @@ export function NextCupLine({
   if (variant === "line") {
     if (status === "live") {
       return (
-        <p className="mt-6 flex flex-wrap items-baseline gap-x-3 gap-y-1 text-sm">
+        <p className="mt-6 flex flex-wrap items-baseline gap-x-3 gap-y-1 text-sm tabular-nums">
           <CupStatusBadge cup={cup} />
           <span>{cup.title}</span>
           <TextLink href={site.twitch}>Watch on Twitch</TextLink>
@@ -60,7 +60,7 @@ export function NextCupLine({
       );
     }
     return (
-      <p className="mt-6 flex flex-wrap items-baseline gap-x-3 gap-y-1 text-sm">
+      <p className="mt-6 flex flex-wrap items-baseline gap-x-3 gap-y-1 text-sm tabular-nums">
         <span className="text-accent">Next cup</span>
         <TextLink href={cupPath(cup.number)}>{`${cup.title} · ${date} · ${time}`}</TextLink>
         <LocalTime startsAt={cup.startsAt} />

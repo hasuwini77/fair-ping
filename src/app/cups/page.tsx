@@ -26,9 +26,9 @@ export default function CupsPage() {
       />
       <div className="pb-16">
         <NextCupLine items={items} variant="card" />
-      </div>
 
-      {/* B4 slot */}
+        {/* B4 slot */}
+      </div>
 
       <Section tight eyebrow="All cups">
         <ol className="divide-y divide-line border-y border-line">

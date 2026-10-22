@@ -39,7 +39,12 @@ export default async function CupPage({ params }: PageProps<"/cups/[n]">) {
       <PageHeader
         eyebrow={`Level ${cup.level} · ${cup.realm ?? "EU realm"}`}
         title={cup.title}
-        lede={`${item.date} at ${item.time}. Free entry, ${cup.slots} players.`}
+        lede={
+          <>
+            <span className="tabular-nums">{`${item.date} at ${item.time}`}</span>
+            {`. Free entry, ${cup.slots} players.`}
+          </>
+        }
       >
         <CupStatusBadge cup={cup} />
         {hasResults ? (
