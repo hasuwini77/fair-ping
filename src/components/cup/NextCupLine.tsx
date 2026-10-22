@@ -107,8 +107,10 @@ export function NextCupLine({
           ) : (
             <ButtonLink href={bracket}>Sign up on Challengermode</ButtonLink>
           )}
-          <span className="inline-flex min-h-11 items-center px-2 text-sm">
-            <TextLink href={cupPath(cup.number)}>Cup details</TextLink>
+          <span className="px-2 text-sm">
+            <TextLink href={cupPath(cup.number)} className="inline-flex min-h-11 items-center">
+              Cup details
+            </TextLink>
           </span>
         </div>
       </article>

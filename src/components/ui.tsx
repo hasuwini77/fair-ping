@@ -165,16 +165,25 @@ export function ButtonLink({
 
 const TEXT_LINK = "text-paper underline decoration-line underline-offset-4 transition-colors hover:decoration-accent";
 
-export function TextLink({ href, children }: { href: string; children: ReactNode }) {
+export function TextLink({
+  href,
+  children,
+  className,
+}: {
+  href: string;
+  children: ReactNode;
+  className?: string;
+}) {
+  const cls = className ? `${TEXT_LINK} ${className}` : TEXT_LINK;
   if (isPageRoute(href)) {
     return (
-      <Link href={href} className={TEXT_LINK}>
+      <Link href={href} className={cls}>
         {children}
       </Link>
     );
   }
   return (
-    <a href={href} className={TEXT_LINK}>
+    <a href={href} className={cls}>
       {children}
       {isExternal(href) ? <span aria-hidden="true"> ↗</span> : null}
     </a>

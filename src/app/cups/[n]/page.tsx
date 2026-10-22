@@ -104,7 +104,9 @@ export default async function CupPage({ params }: PageProps<"/cups/[n]">) {
           <p className="text-muted">Results are posted here after the cup.</p>
         )}
         <p className="mt-8 text-sm">
-          <TextLink href={ROUTES.rules}>Read the rules</TextLink>
+          <TextLink href={ROUTES.rules} className="inline-flex min-h-11 items-center">
+            Read the rules
+          </TextLink>
         </p>
       </Section>
     </main>
