@@ -39,7 +39,7 @@ const steps: readonly Step[] = [
   },
   {
     title: "Join the Discord",
-    body: "The cup realm is announced on Discord, and so are new dates.",
+    body: "The cup realm is announced on Discord.",
     link: { href: site.discord, label: "Join the Discord" },
   },
   {

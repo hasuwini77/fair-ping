@@ -45,7 +45,7 @@ const bodies: Record<RuleId, ReactNode> = {
           </li>
         ))}
       </ul>
-      <p>Gear, talents and consumables: Posted in #rules on Discord before the cup.</p>
+      <p>Gear, talents and consumables: posted in #rules on Discord before the cup.</p>
     </>
   ),
   eligibility: (
