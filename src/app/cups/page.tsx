@@ -46,7 +46,7 @@ export default function CupsPage() {
                     <span className={`block font-display text-base uppercase tracking-[0.06em] ${tone}`}>
                       {cup.title}
                     </span>
-                    <time dateTime={cup.startsAt} className={`mt-1 block tabular-nums ${tone}`}>
+                    <time dateTime={cup.startsAt} className={`mt-1 block whitespace-nowrap tabular-nums ${tone}`}>
                       {`${date} · ${time}`}
                     </time>
                     <span className="block min-h-5 text-sm text-muted">
