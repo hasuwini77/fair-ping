@@ -120,7 +120,7 @@ export function NextCupLine({
   // detail
   if (status === "live") {
     return (
-      <Section tight eyebrow="Live now">
+      <Section tight eyebrow="On stream">
         <p className="font-display text-display leading-none uppercase">Live now</p>
         <div className="mt-8 flex flex-wrap items-center gap-3">
           <ButtonLink href={site.twitch}>Watch on Twitch</ButtonLink>
