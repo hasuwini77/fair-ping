@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { CupFacts } from "@/components/cup/CupFacts";
 import { CupStatusBadge } from "@/components/cup/CupStatusBadge";
 import { NextCupLine } from "@/components/cup/NextCupLine";
+import { UpcomingOnly } from "@/components/cup/UpcomingOnly";
 import { ButtonLink, PageHeader, Section, TextLink } from "@/components/ui";
 import { ROUTES } from "@/config/routes";
 import { site } from "@/config/site";
@@ -55,7 +56,9 @@ export default async function CupPage({ params }: PageProps<"/cups/[n]">) {
             </ButtonLink>
           </>
         ) : (
-          <ButtonLink href={bracket}>Sign up on Challengermode</ButtonLink>
+          <UpcomingOnly cup={cup}>
+            <ButtonLink href={bracket}>Sign up on Challengermode</ButtonLink>
+          </UpcomingOnly>
         )}
       </PageHeader>
 
