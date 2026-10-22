@@ -62,10 +62,12 @@ export function CupCountdown({ startsAt, size = "sm" }: { startsAt: string; size
   ];
   return (
     <div>
-      <div aria-hidden="true" className="flex gap-6 sm:gap-10">
+      <div aria-hidden="true" className="flex gap-4 sm:gap-10">
         {units.map((u) => (
           <div key={u.label}>
-            <span className="block font-display text-display leading-none tabular-nums">
+            <span
+              className={`block whitespace-nowrap font-display text-display leading-none tabular-nums${u.label === "days" ? " min-w-[2ch]" : ""}`}
+            >
               <Digits value={u.value} />
             </span>
             <span className="mt-2 block text-sm text-muted">{u.label}</span>
