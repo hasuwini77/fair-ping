@@ -30,7 +30,8 @@ export const LEDGER_UPDATED_AT = "2026-10-23";
 export const ledger: readonly LedgerEntry[] = [];
 
 export function toUsd(eur: number): number {
-  return Math.round(eur * USD_PER_EUR);
+  // Integer cents first so 50 × 1.15 rounds to 58, not 57 (float 57.4999…).
+  return Math.round((eur * Math.round(USD_PER_EUR * 100)) / 100);
 }
 
 export interface LedgerTotals {
