@@ -8,6 +8,9 @@ export const site = {
   email: "fairpingcup@gmail.com",
 };
 
+export const licenseLine =
+  "Not endorsed by Blizzard Entertainment. World of Warcraft is a trademark of Blizzard Entertainment.";
+
 export const format = [
   { label: "Format", value: "1v1 duels, single elimination" },
   { label: "Slots", value: "64 players" },
@@ -50,6 +53,6 @@ export const faq = [
   },
   {
     q: "When is the first cup?",
-    a: "Late November, at level 30, once the EU realms are live. The exact date goes out on Discord and X first.",
+    a: "Sunday 22 November 2026 at 19:00 CET, at level 30. Cups #2 and #3 follow on 6 and 20 December at level 60.",
   },
 ];
