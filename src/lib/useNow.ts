@@ -21,6 +21,7 @@ function subscribe(listener: () => void): () => void {
     if (listeners.size === 0 && timer !== null) {
       clearInterval(timer);
       timer = null;
+      tick = null;
     }
   };
 }
