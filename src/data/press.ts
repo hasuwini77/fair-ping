@@ -144,7 +144,7 @@ export const snippets: readonly Snippet[] = [
   {
     id: "boilerplate",
     title: "Boilerplate",
-    text: `Fair Ping runs free 1v1 duel cups for WoW Forever on EU realms, every second Sunday at 19:00 CET. Entry is free, and players 18+ can win cash prizes. The cups run under Blizzard's Community Competition License. ${licenseLine}`,
+    text: `Fair Ping runs free-entry 1v1 duel cups for WoW Forever on EU realms, every second Sunday at 19:00 CET. Cash prizes for players 18+. Runs under Blizzard's Community Competition License. ${licenseLine}`,
   },
   {
     id: "announcement",
