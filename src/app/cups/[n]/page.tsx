@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageUrl } from "@/lib/meta";
+import { cupPath } from "@/config/routes";
 import { notFound } from "next/navigation";
 import { CupFacts } from "@/components/cup/CupFacts";
 import { CupStatusBadge } from "@/components/cup/CupStatusBadge";
@@ -24,6 +26,7 @@ export async function generateMetadata({ params }: PageProps<"/cups/[n]">): Prom
   if (!cup) return {};
   const date = formatCupDate(cup.startsAt);
   return {
+    ...pageUrl(cupPath(cup.number), { siteImage: false }),
     title: { absolute: `${cup.title} · ${date}` },
     description: `${cup.title} is a level ${cup.level} duel cup on ${date} at ${formatCetTime(cup.startsAt)}. Free entry, ${cup.slots} players, ${formatEur(cup.prizeEur)} prize.`,
   };

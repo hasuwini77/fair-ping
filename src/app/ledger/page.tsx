@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageUrl } from "@/lib/meta";
+import { ROUTES } from "@/config/routes";
 import { EntriesTable } from "@/components/season/EntriesTable";
 import { Meter } from "@/components/season/Meter";
 import { formatEurSigned, formatLedgerDate, formatUsdApprox } from "@/components/season/format";
@@ -15,6 +17,7 @@ import {
 } from "@/data/ledger";
 
 export const metadata: Metadata = {
+  ...pageUrl(ROUTES.ledger),
   title: "Ledger",
   description:
     "Every prize Fair Ping has paid and every sponsor payment it has received, with usage against the Blizzard license caps.",

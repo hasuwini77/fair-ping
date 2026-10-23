@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageUrl } from "@/lib/meta";
+import { ROUTES } from "@/config/routes";
 import { CupResultBlock } from "@/components/season/CupResultBlock";
 import { LeaderboardTable } from "@/components/season/LeaderboardTable";
 import { PointsTable } from "@/components/season/PointsTable";
@@ -8,6 +10,7 @@ import { getLeaderboard } from "@/lib/points";
 import { labelCups } from "@/lib/time";
 
 export const metadata: Metadata = {
+  ...pageUrl(ROUTES.results),
   title: "Season results",
   description:
     "The Fair Ping season leaderboard, with placements, points and VODs for every cup that has been played.",

@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import { pageUrl } from "@/lib/meta";
 import type { ReactNode } from "react";
 import { ButtonLink, PageHeader, Section, TextLink } from "@/components/ui";
 import { ROUTES, rulePath } from "@/config/routes";
 import { site } from "@/config/site";
 
 export const metadata: Metadata = {
+  ...pageUrl(ROUTES.join),
   title: "How to join",
   description:
     "Six steps to enter a Fair Ping cup: make a Challengermode account, sign up, check in, join the Discord and screenshot your games.",

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageUrl } from "@/lib/meta";
 import type { ReactNode } from "react";
 import { RuleList, RuleSection } from "@/components/content/RuleSection";
 import { PageHeader, TextLink } from "@/components/ui";
@@ -8,6 +9,7 @@ import { cups } from "@/data/cups";
 import { LICENSE_URL } from "@/data/ledger";
 
 export const metadata: Metadata = {
+  ...pageUrl(ROUTES.rules),
   title: "Rules",
   description:
     "Format, levels, eligibility, check-in, no-shows, disputes, conduct, prizes and license for every Fair Ping cup.",
