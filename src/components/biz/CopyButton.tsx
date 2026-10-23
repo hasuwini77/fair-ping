@@ -13,8 +13,12 @@ export function CopyButton({ text, label }: { text: string; label: string }) {
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const button = useRef<HTMLButtonElement>(null);
 
+  const mounted = useRef(true);
+
   useEffect(() => {
+    mounted.current = true;
     return () => {
+      mounted.current = false;
       if (timer.current) clearTimeout(timer.current);
     };
   }, []);
@@ -23,13 +27,19 @@ export function CopyButton({ text, label }: { text: string; label: string }) {
     if (timer.current) clearTimeout(timer.current);
     try {
       await navigator.clipboard.writeText(text);
+      if (!mounted.current) return;
       setStatus("copied");
-      setAnnounce(`${label} copied`);
+      setAnnounce("");
+      setTimeout(() => {
+        if (mounted.current) setAnnounce(`${label.charAt(0).toUpperCase()}${label.slice(1)} copied`);
+      }, 50);
       timer.current = setTimeout(() => {
+        if (!mounted.current) return;
         setStatus("idle");
         setAnnounce("");
       }, 2000);
     } catch {
+      if (!mounted.current) return;
       const source = button.current?.closest("[data-copy-block]")?.querySelector("[data-copy-source]");
       if (source) window.getSelection()?.selectAllChildren(source);
       setStatus("fallback");
