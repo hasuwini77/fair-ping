@@ -71,7 +71,9 @@ export default async function CupPage({ params }: PageProps<"/cups/[n]">) {
 
         {/* B4 slot */}
         <CupJsonLd cup={cup} />
-        <AddToCalendar cup={cup} />
+        <UpcomingOnly cup={cup}>
+          <AddToCalendar cup={cup} />
+        </UpcomingOnly>
       </Section>
 
       <Section tight eyebrow="Results">
