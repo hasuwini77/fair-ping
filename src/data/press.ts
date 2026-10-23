@@ -149,7 +149,7 @@ export const snippets: readonly Snippet[] = [
   {
     id: "announcement",
     title: "Announcement",
-    text: `The Forever Open ran on the US beta, and dueling from Europe at 150 ms was no fun. EU realms are up now, so we are running a free duel cup there.
+    text: `The Forever Open ran on the US beta, and dueling from Europe at 150 ms wasn't much fun. Now that EU realms are up, I'm running a free duel cup there.
 
 Format: 1v1, level 30, Horde on an EU realm, announced on Discord. Single elimination, 64 slots, best of 3, best of 5 for the final.
 Entry: free. Prize: 50 EUR to the winner (18+ for the cash prize).
@@ -157,7 +157,7 @@ When: Sunday 22 November 2026, 19:00 CET.
 Sign up: ${site.challengermode}
 Stream: ${site.twitch}
 
-If it fills, it runs every second Sunday and moves to level 60 in December. Feedback on the format is welcome. We would also like to hear which classes you expect to be broken at level 30.
+If it fills, it runs every second Sunday and moves to level 60 in December. Feedback on the format is welcome. I'd also like to hear which classes people think will be broken at 30.
 
 Not endorsed by Blizzard Entertainment.`,
   },
