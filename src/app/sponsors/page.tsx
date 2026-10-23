@@ -19,7 +19,7 @@ const rules = [
   { text: `All sponsors together stay under ${formatUsd(LICENSE_CAPS.allSponsorsPerEventUsd)} per cup.` },
   {
     text: "No sponsors from these categories.",
-    detail: `${sponsorExclusions.join("; ")}.`,
+    detail: `${sponsorExclusions.join("; ").replace(/^./, (c) => c.toUpperCase())}.`,
   },
   { text: "Multinational consumer brands and video-game-industry products need Blizzard's approval." },
   { text: "Entry stays free.", detail: "Players never pay to sign up." },
