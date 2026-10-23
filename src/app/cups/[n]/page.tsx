@@ -4,6 +4,8 @@ import { CupFacts } from "@/components/cup/CupFacts";
 import { CupStatusBadge } from "@/components/cup/CupStatusBadge";
 import { NextCupLine } from "@/components/cup/NextCupLine";
 import { UpcomingOnly } from "@/components/cup/UpcomingOnly";
+import { AddToCalendar } from "@/components/discovery/AddToCalendar";
+import { CupJsonLd } from "@/components/discovery/CupJsonLd";
 import { ButtonLink, PageHeader, Section, TextLink } from "@/components/ui";
 import { ROUTES } from "@/config/routes";
 import { site } from "@/config/site";
@@ -68,6 +70,8 @@ export default async function CupPage({ params }: PageProps<"/cups/[n]">) {
         <CupFacts {...item} />
 
         {/* B4 slot */}
+        <CupJsonLd cup={cup} />
+        <AddToCalendar cup={cup} />
       </Section>
 
       <Section tight eyebrow="Results">
