@@ -1,9 +1,14 @@
+import type { Metadata } from "next";
 import { Blades } from "@/components/Blades";
 import { NextCupLine } from "@/components/cup/NextCupLine";
 import { Eyebrow, Heading } from "@/components/ui";
 import { cups } from "@/data/cups";
 import { crew, faq, format, site } from "@/config/site";
 import { labelCups } from "@/lib/time";
+import { pageUrl } from "@/lib/meta";
+import { ROUTES } from "@/config/routes";
+
+export const metadata: Metadata = { ...pageUrl(ROUTES.home) };
 
 const joinUrl = site.discord || site.challengermode;
 const joinLabel = site.discord ? "Join the Discord" : "Follow on Challengermode";

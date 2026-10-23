@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageUrl } from "@/lib/meta";
+import { ROUTES } from "@/config/routes";
 import Image from "next/image";
 import { SnippetBlock } from "@/components/biz/SnippetBlock";
 import { ButtonLink, FactGrid, PageHeader, Section, TextLink } from "@/components/ui";
@@ -7,6 +9,7 @@ import { LICENSE_URL } from "@/data/ledger";
 import { brandRules, brandZip, logoTiles, snippets } from "@/data/press";
 
 export const metadata: Metadata = {
+  ...pageUrl(ROUTES.press),
   title: "Press kit",
   description:
     "Logos, brand rules and ready-to-paste copy for writing about Fair Ping: a boilerplate, an announcement, a stream description and a Discord post.",

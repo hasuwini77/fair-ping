@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageUrl } from "@/lib/meta";
+import { ROUTES } from "@/config/routes";
 import Link from "next/link";
 import { CupStatusBadge } from "@/components/cup/CupStatusBadge";
 import { LocalTime } from "@/components/cup/LocalTime";
@@ -11,6 +13,7 @@ import { formatEur } from "@/lib/money";
 import { labelCups } from "@/lib/time";
 
 export const metadata: Metadata = {
+  ...pageUrl(ROUTES.cups),
   title: "Cup schedule",
   description:
     "Dates, levels and prizes for every Fair Ping cup. Each cup is free to enter, with 64 slots and a bracket on Challengermode.",

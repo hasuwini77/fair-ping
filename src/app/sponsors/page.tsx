@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageUrl } from "@/lib/meta";
 import { ButtonLink, PageHeader, Section, TextLink } from "@/components/ui";
 import { ROUTES } from "@/config/routes";
 import { site } from "@/config/site";
@@ -7,6 +8,7 @@ import { sponsorExclusions, sponsorTiers } from "@/data/sponsors";
 import { formatEur, formatUsd } from "@/lib/money";
 
 export const metadata: Metadata = {
+  ...pageUrl(ROUTES.sponsors),
   title: "Sponsor a cup",
   description:
     "Prizes come from us and from sponsors. See the three tiers, what a sponsor gets, the rules that come with the Blizzard license and how to get in touch.",
