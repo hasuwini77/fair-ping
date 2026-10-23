@@ -1,7 +1,7 @@
 import { absoluteUrl, cupPath } from "@/config/routes";
 import { site } from "@/config/site";
 import { CUPS_UPDATED_AT, type Cup } from "@/data/cups";
-import { cupEndMs } from "@/lib/time";
+import { CUP_TIMEZONE, cupEndMs } from "@/lib/time";
 
 const CRLF = "\r\n";
 const FOLD_OCTETS = 75;
@@ -95,6 +95,7 @@ export function googleCalendarUrl(cup: Cup): string {
     `dates=${dates}`,
     `details=${encodeURIComponent(details)}`,
     `location=${encodeURIComponent(locationOf(cup))}`,
+    `ctz=${encodeURIComponent(CUP_TIMEZONE)}`,
   ].join("&");
   return `https://calendar.google.com/calendar/render?${query}`;
 }
