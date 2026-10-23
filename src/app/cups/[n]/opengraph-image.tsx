@@ -58,13 +58,13 @@ export default async function Image({ params }: { params: Promise<{ n: string }>
               </g>
             ))}
           </svg>
-          <div style={{ display: "flex", fontSize: 40, letterSpacing: 6, color: ACCENT }}>
+          <div style={{ display: "flex", fontSize: 44, letterSpacing: 6, color: ACCENT }}>
             DUEL CUP · EU REALMS
           </div>
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
-          <div style={{ display: "flex", fontSize: 168, lineHeight: 0.92, letterSpacing: -2 }}>
+          <div style={{ display: "flex", fontSize: cup.number >= 10 ? 136 : 168, lineHeight: 0.92, letterSpacing: -2 }}>
             {`FAIR PING CUP #${cup.number}`}
           </div>
           <div style={{ display: "flex", fontSize: 56, color: PAPER }}>{when}</div>
