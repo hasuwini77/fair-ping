@@ -9,7 +9,7 @@ import { formatEur, formatUsd } from "@/lib/money";
 export const metadata: Metadata = {
   title: "Sponsor a cup",
   description:
-    "Sponsors pay the prizes at Fair Ping cups. See the three tiers, what a sponsor gets, the rules that come with the Blizzard license and how to get in touch.",
+    "Prizes come from us and from sponsors. See the three tiers, what a sponsor gets, the rules that come with the Blizzard license and how to get in touch.",
 };
 
 const mailto = (subject: string) => `mailto:${site.email}?subject=${encodeURIComponent(subject)}`;
@@ -34,7 +34,7 @@ export default function SponsorsPage() {
         title="Put your name on a cup."
         lede={
           <>
-            Entry stays free, so sponsors pay the prizes. Every payment shows up on the{" "}
+            Entry stays free. Prizes come from us and from sponsors, and every payment shows up on the{" "}
             <TextLink href={ROUTES.ledger}>ledger</TextLink>.
           </>
         }
