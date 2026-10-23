@@ -3,6 +3,7 @@ import Link from "next/link";
 import { CupStatusBadge } from "@/components/cup/CupStatusBadge";
 import { LocalTime } from "@/components/cup/LocalTime";
 import { NextCupLine } from "@/components/cup/NextCupLine";
+import { CalendarSubscribe } from "@/components/discovery/CalendarSubscribe";
 import { PageHeader, Section } from "@/components/ui";
 import { cupPath } from "@/config/routes";
 import { cups } from "@/data/cups";
@@ -28,6 +29,7 @@ export default function CupsPage() {
         <NextCupLine items={items} variant="card" />
 
         {/* B4 slot */}
+        <CalendarSubscribe />
       </div>
 
       <Section tight eyebrow="All cups">
