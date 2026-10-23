@@ -35,7 +35,7 @@ export function GET() {
     "  <channel>",
     "    <title>Fair Ping cups</title>",
     `    <link>${escapeXml(site.url)}</link>`,
-    "    <description>Free 1v1 duel cups on EU realms. New cups are posted here first.</description>",
+    "    <description>Dates, levels and prizes for every Fair Ping cup.</description>",
     "    <language>en</language>",
     `    <lastBuildDate>${new Date(CUPS_UPDATED_AT).toUTCString()}</lastBuildDate>`,
     `    <atom:link href="${escapeXml(absoluteUrl(ROUTES.feed))}" rel="self" type="application/rss+xml" />`,
