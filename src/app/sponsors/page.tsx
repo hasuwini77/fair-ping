@@ -65,7 +65,7 @@ export default function SponsorsPage() {
                 </p>
                 <div className="mt-4">
                   <ButtonLink href={mailto(`Sponsoring Fair Ping Cup: ${tier.name}`)} variant="secondary">
-                    Ask about {tier.name}
+                    Email us<span className="sr-only"> about {tier.name}</span>
                   </ButtonLink>
                 </div>
               </article>
