@@ -18,7 +18,7 @@ function utcFromMs(ms: number): string {
 
 /** RFC 5545 TEXT escaping. */
 function escapeText(value: string): string {
-  return value.replace(/\\/g, "\\\\").replace(/;/g, "\;").replace(/,/g, "\\,").replace(/\r?\n/g, "\\n");
+  return value.replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\r?\n/g, "\\n");
 }
 
 /** Fold a content line at 75 octets without splitting a character. */
