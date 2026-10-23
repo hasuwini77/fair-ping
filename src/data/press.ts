@@ -1,4 +1,5 @@
 // Press kit data for /press: logo tiles, brand rules and copy snippets.
+import { ROUTES, absoluteUrl } from "@/config/routes";
 import { site, licenseLine } from "@/config/site";
 
 export interface LogoFile {
@@ -166,13 +167,15 @@ Not endorsed by Blizzard Entertainment.`,
     title: "Caster",
     text: `Title: Fair Ping Cup #1 | Level 30 | Free 1v1 duels on an EU realm
 
-Description: 64 players, single elimination, best of 3 with a best of 5 final. Entry is free and the winner gets 50 EUR. Bracket and sign-up: ${site.challengermode}`,
+Description: 64 players, single elimination, best of 3 with a best of 5 final. Entry is free and the winner gets 50 EUR (18+ for the cash prize). Bracket and sign-up: ${site.challengermode}
+
+Not endorsed by Blizzard Entertainment.`,
   },
   {
     id: "community",
     title: "Community",
-    text: `Fair Ping Cup #1 is on Sunday 22 November at 19:00 CET. Level 30, Horde, 64 slots, free entry, 50 EUR for the winner. Sign up on Challengermode: ${site.challengermode}
-Cup details and rules: ${site.url}/cups
+    text: `Fair Ping Cup #1 is on Sunday 22 November at 19:00 CET. Level 30, Horde, 64 slots, free entry, 50 EUR for the winner (18+ for the cash prize). Sign up on Challengermode: ${site.challengermode}
+Cup details: ${absoluteUrl(ROUTES.cups)}
 Not endorsed by Blizzard Entertainment.`,
   },
 ];
