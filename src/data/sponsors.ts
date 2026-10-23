@@ -38,7 +38,7 @@ export const sponsorTiers: readonly SponsorTier[] = [
   {
     id: "season-partner",
     name: "Season partner",
-    summary: "Cup partner for three cups in a row.",
+    summary: "Cup partner for three cups.",
     perks: [
       "Every Cup partner perk, for three cups",
       "First refusal on the next season",
