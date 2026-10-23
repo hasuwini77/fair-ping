@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
@@ -27,9 +28,9 @@ export function generateStaticParams() {
 export default async function Image({ params }: { params: Promise<{ n: string }> }) {
   const { n } = await params;
   const cup = getCup(n);
-  const number = cup?.number ?? n;
-  const when = cup ? `${formatCupDate(cup.startsAt)} · ${formatCetTime(cup.startsAt)}` : "";
-  const facts = cup ? `Level ${cup.level} · Free entry · €${cup.prizeEur}` : "Free entry";
+  if (!cup) notFound();
+  const when = `${formatCupDate(cup.startsAt)} · ${formatCetTime(cup.startsAt)}`;
+  const facts = `Level ${cup.level} · Free entry · €${cup.prizeEur}`;
 
   return new ImageResponse(
     (
@@ -64,7 +65,7 @@ export default async function Image({ params }: { params: Promise<{ n: string }>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
           <div style={{ display: "flex", fontSize: 168, lineHeight: 0.92, letterSpacing: -2 }}>
-            {`FAIR PING CUP #${number}`}
+            {`FAIR PING CUP #${cup.number}`}
           </div>
           <div style={{ display: "flex", fontSize: 56, color: PAPER }}>{when}</div>
         </div>
