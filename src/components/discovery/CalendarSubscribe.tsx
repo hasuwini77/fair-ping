@@ -10,7 +10,7 @@ export function CalendarSubscribe() {
       <ButtonLink href={WEBCAL_URL} variant="secondary">
         Subscribe to all cups
       </ButtonLink>
-      <TextLink href={ROUTES.calendar} className="inline-flex min-h-11 items-center">
+      <TextLink href={ROUTES.calendar} className="inline-flex min-h-11 items-center text-sm">
         Download .ics
       </TextLink>
     </div>

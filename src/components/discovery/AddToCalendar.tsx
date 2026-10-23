@@ -9,7 +9,7 @@ export function AddToCalendar({ cup }: { cup: Cup }) {
       <ButtonLink href={cupIcsPath(cup.number)} variant="secondary">
         Add to calendar
       </ButtonLink>
-      <TextLink href={googleCalendarUrl(cup)} className="inline-flex min-h-11 items-center">
+      <TextLink href={googleCalendarUrl(cup)} className="inline-flex min-h-11 items-center text-sm">
         Google Calendar
       </TextLink>
     </div>
